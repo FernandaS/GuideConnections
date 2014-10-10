@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title>--GuideConnections--</title>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+<!-- 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body class= "corpo" ng-controller="mainCtrl" >
+
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand logo" href="#/home">GuideConnection</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-show="show"><a href="#/login">Login</a>
+                <li ng-hide="show" ng-click="logout()"><a href="#/layout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div ng-view>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
+ --><script src="https://cdn.firebase.com/js/client/1.1.0/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.8.2/angularfire.min.js"></script>
+<script src="https://cdn.firebase.com/js/simple-login/1.6.3/firebase-simple-login.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/env.js"></script>
+<script src="app/envService.js"></script>
+<script src="app/authServices.js"></script>
+
+<script src="app/mainCtrl.js"></script>
+<script src="pages/homeCtrl.js"></script>
+<script src="services/firebaseService.js"></script>
+<script src="pages/signupCtrl.js"></script>
+<script src="pages/loginCtrl.js"></script>
+<script src="pages/connectCtrl.js"></script>
+<script src="pages/gLayoutCtrl.js"></script>
+
+</body> 
+
+</html>

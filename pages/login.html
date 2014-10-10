@@ -1,0 +1,33 @@
+
+
+
+<div class='login-signup-form' ng-controller='loginCtrl' >
+            <form class="form-horizontal" role="form" name="loginForm" novalidade>
+            <h3 class="login-hearder">Login to GuideConnections.com</h3>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+                   <div class="col-xs-4">
+                        <input type="email" class="form-control signup" id="inputEmail3" placeholder="Email" name="email" ng-model="user.email">
+                        <p class='help-block'>Email is required</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-xs-4">
+                
+                        <input type="password" class="form-control signup" id="inputPassword3" placeholder="Password" name="password" ng-model="user.password">
+                    
+                
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" ng-click="logMeIn()">Login</button>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+
+
