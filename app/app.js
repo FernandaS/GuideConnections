@@ -20,10 +20,21 @@ app.config(['$routeProvider', function($routeProvider){
  		controller: 'connectCtrl'
  	})
  	.when('/layout/:userId', {
- 		templateUrl: 'pages/glayout.html',
+ 		templateUrl: 'pages/gLayout.html',
  		controller: 'gLayoutCtrl',
  		resolve: {
  			user: function(authServices, $route){
+ 				
+ 				return authServices.getUser($route.current.params.userId);
+ 			}
+ 		}
+ 	})
+ 	.when('/connectLayout/:connectId',{
+ 		templateUrl: 'pages/clayout.html',
+ 		controller: 'clayoutCtrl',
+ 		resolve: {
+ 			user: function(authServices, $route){
+ 
  				return authServices.getUser($route.current.params.userId);
  			}
  		}

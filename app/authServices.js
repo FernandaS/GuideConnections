@@ -25,15 +25,16 @@ this.guideSignUp = function(user, cb){
 					authData.state = user.state;
 					authData.zip = user.zip;
 					authData.aboutMe = user.aboutMe;
+					authData.isConnector = false;
 					authData.school = user.school;
-					authData.english = user.english;
-					authData.portuguese = user.portuguese;
-					authData.spanish = user.spanish;
-					authData.italian = user.italian;
-					authData.french = user.french;
+					authData.english = user.english || false;
+					authData.portuguese = user.portuguese || false;
+					authData.spanish = user.spanish || false;
+					authData.italian = user.italian || false;
+					authData.french = user.french || false;
 					fireSignup.child('users').child(authData.uid.replace('simplelogin:', '')).set(authData);
 					cb(authData);
-				}else {
+				} else {
 					console.log('something went Wrong');
 				}
 				
@@ -47,7 +48,6 @@ this.guideSignUp = function(user, cb){
 	}
 	
 this.connectionSignUp = function(user, cb){
-	debugger;
 	fireSignup.createUser({
 		email: user.email,
 		password: user.password
@@ -60,7 +60,17 @@ this.connectionSignUp = function(user, cb){
 			}, function(err, authData){
 				if (authData){
 					authData.name = user.name;
-					fireSignup.child('connecter').child(authData.uid.replace('simplelogin:', '')).set(authData);
+					authData.username = user.name;
+					authData.city = user.city;
+					authData.state = user.state;
+					authData.zip = user.zip;
+					authData.isConnector = true;
+					authData.casualTranslator = user.casualTranslator || false;
+					authData.casualTranslator = user.professionalTranslator || false;
+					authData.casualTranslator = user.airportPickup|| false;
+					authData.casualTranslator = user.shoppingGuidance || false;
+					authData.casualTranslator = user.driveAround || false;
+					fireSignup.child('users').child(authData.uid.replace('simplelogin:', '')).set(authData);
 					cb(authData);
 				}else {
 					console.log('something went Wrong');

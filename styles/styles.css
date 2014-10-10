@@ -108,5 +108,16 @@ a.logo {
 
 .user-name {
 	size: 25px;
-	padding
+	
+}
+
+/*connect.html*/
+.about-connecter {
+	margin-left: 48px;
+}
+.connect-signupbtn {
+	float: right;
+	margin-right: 15px;
+	margin-left: 15px;
+	background-color: #fd680e;
 }
