@@ -18,6 +18,7 @@ this.guideSignUp = function(user, cb){
 				password: user.password
 			}, function(err, authData){
 				if (authData){
+					authData.languages = {};
 					authData.name = user.name;
 					authData.username = user.username;
 					authData.address = user.address;
@@ -27,11 +28,11 @@ this.guideSignUp = function(user, cb){
 					authData.aboutMe = user.aboutMe;
 					authData.isConnector = false;
 					authData.school = user.school;
-					authData.english = user.english || false;
-					authData.portuguese = user.portuguese || false;
-					authData.spanish = user.spanish || false;
-					authData.italian = user.italian || false;
-					authData.french = user.french || false;
+					authData.languages.english = {language: 'English', fluent: user.english || false};
+					authData.languages.portuguese = {language: 'Portuguese', fluent: user.portuguese || false};
+					authData.languages.spanish = {language: 'Spanish', fluent: user.spanish || false};
+					authData.languages.italian = {language: 'Italian', fluent: user.italian || false};
+					authData.languages.french = {language: 'French', fluent: user.french || false};
 					fireSignup.child('users').child(authData.uid.replace('simplelogin:', '')).set(authData);
 					cb(authData);
 				} else {

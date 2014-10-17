@@ -24,26 +24,38 @@ app.config(['$routeProvider', function($routeProvider){
  		controller: 'gLayoutCtrl',
  		resolve: {
  			user: function(authServices, $route){
- 				
  				return authServices.getUser($route.current.params.userId);
  			}
  		}
  	})
- 	.when('/connectLayout/:connectId',{
+ 	.when('/connectLayout/:connecterId',{
  		templateUrl: 'pages/clayout.html',
  		controller: 'clayoutCtrl',
  		resolve: {
  			user: function(authServices, $route){
- 
- 				return authServices.getUser($route.current.params.userId);
+ 				return authServices.getUser($route.current.params.connecterId);
+ 			},
+ 			guiders: function(firebaseService){
+ 				return firebaseService.getGuiders();
+ 			}
+ 		}
+ 	})
+ 	.when('/connectLayout/:connecterId/guider/:guiderId',{
+ 		templateUrl: 'pages/guiderReview.html',
+ 		controller: 'guiderReviewCtrl',
+ 		resolve: {
+ 			user: function(authServices, $route){
+ 				return authServices.getUser($route.current.params.connecterId);
+ 			},
+ 			guider: function(firebaseService, $route){
+ 				return firebaseService.getGuider($route.current.params.guiderId);
+ 			},
+ 			comments: function(firebaseService, $route){
+ 				return firebaseService.getGuiderComments($route.current.params.guiderId);
  			}
  		}
  	})
  	.otherwise({
  		redirectTo: '/'
- 	})
-
- 	
-
-
- 	}]);
+ 	});
+}]);

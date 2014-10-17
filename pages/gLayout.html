@@ -1,22 +1,78 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row layout-header" >
         <div class="col-md-8">
-            <div class="pic-name">
-            <img src="..." alt="..." class="img-thumbnail">
-             <p class="user-name">Welcome {{user.name}}</p>
+            <div class="pic-name"> -->
+            <!-- <img src="..." alt="..." class="img-thumbnail"> -->
+             <!-- <p class="user-name">Welcome {{user.name}}</p>
             </div>
        </div>
         <div class="col-md-4">
+            
             <div class="side-note">
-            {{user.city}}
-            {{user.state}}
-            {{user.state}}
+            <p>City: {{user.city}}</p>
+
+            <p>State: {{user.state}}</p>
+            <div>
+                <h4>Languages</h4>
+                <ul>
+                    <li ng-repeat="language in user.languages" ng-show="language.fluent">{{language.language}}</li>
+                </ul>
+            </div>
             </div>
             
         </div>
-    </div>
-</div>
 
+    </div>
+    <div ng-repeat="comment in user.comments">
+        Rating: {{comment.rating}}
+        <br/>
+         User Comment: {{comment.text}}
+    </div>
+</div> -->
+
+<div class="container guider-about-wrapper">
+    <div class="row guider-profile">
+        <div class="col-sm-3">
+            <div class="round-pic">
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTBgG7BPEyIGN21DFdJCYCelnHDA6Cw_DwTRtu9em0PWGoBMgY" alt="..." class="img-circle">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="about-guider">
+            <h1>{{user.name}}</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor vestibulum imperdiet. Ut auctor accumsan erat, a vulputate metus tristique non. Aliquam aliquam vel orci quis sagittis.</p>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="guider-location">
+                <address>
+                    <h2>
+                       <i class="fa fa-map-marker address"></i> Location
+                    </h2> <br/>  
+                       795 Folsom Ave, Suite 600<br>
+                        San Francisco, CA 94107<br>
+                     
+                </address>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="row guider-information">
+
+    </div>
+
+
+
+
+    
+</div>
 
 
 

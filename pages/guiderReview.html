@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row layout-header" >
+        <div class="col-md-8">
+            <div class="pic-name">
+            <!-- <img src="..." alt="..." class="img-thumbnail"> -->
+             	<h2 class="user-name">{{guider.name}}</h2>
+            </div>
+       </div>
+        <div class="col-md-4">
+            
+            <div class="side-note">
+            <p>City: {{guider.city}}</p>
+
+            <p>State: {{guider.state}}</p>
+            <div>
+                <h4>Languages</h4>
+                <ul>
+                    <li ng-repeat="language in guider.languages" ng-show="language.fluent">{{language.language}}</li>
+                </ul>
+            </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <input ng-model="comment.text"/>
+<select ng-model="comment.rating">
+	<option value="1">Total Crap for Crap</option>
+	<option value="2">Not so pleased</option>
+	<option value="3">Meh</option>
+	<option value="4">Decent</option>
+	<option value="5">Super Cool Awesome Sauce</option>
+</select>
+
+<button ng-click="addComment()">Add Comment</button>
+
+    <div ng-repeat="comment in guider.comments">
+        Rating: {{comment.rating}}
+        <br/>
+         User Comment: {{comment.text}}
+    </div>
+</div>
+

@@ -1,1 +1,6 @@
 <p>this page is for the layout of the Connector</p>
+
+<div ng-repeat="guider in guiders | filter: {isConnector: 'false'}">
+<a ng-href="#/connectLayout/{{user.$id}}/guider/{{guider.$id}}">{{guider.name}} {{guider.city}} <a>
+	
+</div>

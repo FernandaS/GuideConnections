@@ -10,6 +10,7 @@ a.logo {
 	margin-bottom: 0;
 	border-radius: 0px;
 	height: 65px;
+	background-color: #32323a;
 }
 
 /*Styles for home.html*/
@@ -61,6 +62,7 @@ a.logo {
 	margin-top: 37px;
 }
 
+
 /*Styles for login.html*/
 
 .login-hearder {
@@ -91,7 +93,7 @@ a.logo {
 }
 
 /* Styles for gLayout.html*/
-.layout-header {
+/*.layout-header {
 	margin-top: 20px;
 }
 .pic-name {
@@ -109,6 +111,80 @@ a.logo {
 .user-name {
 	size: 25px;
 	
+}*/
+.guider-about-wrapper {
+	background-color: #f1f2f7;
+	height: 700px;
+	width: 100%;
+}
+.guider-profile {
+	width: 85%;
+	height: 278px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	margin-top: 19px;
+	border-radius: 4px;
+}
+
+.round-pic img {
+	width: 160px;
+	height: 160px;
+	-webkit-border-radius: 50%;
+	border: 10px solid #f1f2f7;
+	margin-top: 20px;
+	margin-left: 25px;
+}
+.about-guider {
+	border-right: 1px solid #ddd;
+	padding-right: 30px;
+}
+
+.about-guider h1 {
+	padding-bottom: 25px;
+	padding-top: 18px;
+	color: #1fb5ad;
+
+}
+
+.about-guider p {
+	color: #767676;
+}
+
+.guider-information {
+	width: 85%;
+	height: 350px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	margin-top: 19px;
+	border-radius: 4px;
+}
+
+.guider-location address {
+	padding-top: 25px;
+	color: #767676;
+	size: 18px;
+
+	
+}
+
+.guider-location .address {
+	width: 32px;
+	height: 32px;
+	background: #1fb5ad;
+	-webkit-border-radius: 50%;
+	text-align: center;
+	size: 32px;
+	color: white;
+	line-height: 32px;
+}
+
+.guider-location h2 {
+	color: #1fb5ad;
+	text-transform: uppercase;
+	font-size: 16px;
+	display: inline-block;
 }
 
 /*connect.html*/
@@ -121,3 +197,4 @@ a.logo {
 	margin-left: 15px;
 	background-color: #fd680e;
 }
+

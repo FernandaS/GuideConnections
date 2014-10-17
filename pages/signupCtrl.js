@@ -1,6 +1,6 @@
 var app = angular.module('myApp');
 
-app.controller('signupCtrl', function($scope, $firebase, authServices, firebaseService, $location) {
+app.controller('signupCtrl', function($scope, $firebase, authServices, $location) {
 
 $scope.signup = function(){
 	authServices.guideSignUp($scope.user, function(userData){
@@ -9,9 +9,6 @@ $scope.signup = function(){
 			$location.path('/layout/' + userData.uid);	
 		})
 		$scope.showForm = '';
-
-
-
 	})
 }
 

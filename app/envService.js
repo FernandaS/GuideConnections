@@ -1,8 +1,8 @@
-var app = angular.module('myApp');
+// var app = angular.module('myApp');
 
-app.service('firebaseService', function ($firebase) {
-  var firebaseUrl = 'https://guideconnection.firebaseio.com/';
+// app.service('envService', function () {
+  
 
 
       
-  });
+//   });
